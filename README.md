@@ -70,7 +70,7 @@ Province 2:
 
 The knight can form two different strings (ababababab and bababababa), so we print **2** on a new line.
 
-## Try it Out
+## Try it
 If you'd care to play around with this code please check out the [corresponding repl.it](https://repl.it/@xanimo/GridlandProvinces#index.js).  And if you'd care to follow or get in touch here is my [HackerRank profile](https://www.hackerrank.com/profile/bluezr).
 
 <a href="https://repl.it/@xanimo/GridlandProvinces#index.js" target="_blank"><img src="https://raw.githubusercontent.com/xanimo/images/master/replit.svg?token=AHTBONGAPFTTFFRQALQZLCK7NZ3WG" width="150"/></a> <a href="https://www.hackerrank.com/profile/bluezr" target="_blank"><img src="https://raw.githubusercontent.com/xanimo/images/master/hrlogo.svg?token=AHTBONALBFYHHXNAG4MQE427NZZK2" width="250"/></a> 
