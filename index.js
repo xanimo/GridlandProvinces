@@ -86,7 +86,7 @@ function hh(n, a) {
 };
 
 // manually set testcase file below
-fs.readFile('testcase0.txt', function(err, data) {
+fs.readFile('testcase1.txt', function(err, data) {
     if(err) return console.log(err);
     inputString = data.toString();
     inputString = inputString.trim().split('\n').map(str => str.trim());
