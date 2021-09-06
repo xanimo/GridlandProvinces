@@ -110,7 +110,7 @@ function main() {
 
     for (let i = 0; i < 128; ++i) V[i] = i ^ i >> 1;
 
-    const ws = fs.createWriteStream((process.env.OUTPUT_PATH).toString());
+    const ws = fs.createWriteStream('output.txt');
     const p1 = parseInt(readLine(), 10);
     for (var pItr = p1; pItr > 0; pItr--) {
         var n = parseInt(readLine(), 10),
