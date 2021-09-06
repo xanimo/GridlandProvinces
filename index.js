@@ -1,5 +1,4 @@
 'use strict';
-const output = process.env['OUTPUT_PATH']
 
 const fs = require('fs');
 const {
@@ -7,6 +6,9 @@ const {
   PerformanceObserver
 } = require('perf_hooks');
 const _ = require('underscore');
+
+process.stdin.resume();
+process.stdin.setEncoding('utf-8');
 
 var inputString = '';
 var currentLine = 0;
@@ -87,7 +89,7 @@ function hh(n, a) {
 };
 
 // manually set testcase file below
-fs.readFile('testcase1.txt', function(err, data) {
+fs.readFile(('testcase1.txt').toString(), function(err, data) {
     if(err) return console.log(err);
     inputString = data.toString();
     inputString = inputString.trim().split('\n').map(str => str.trim());
@@ -101,8 +103,6 @@ function readLine() {
     return inputString[currentLine++];
 };
 function main() {
-// console.log(process.env.OUTPUT_PATH)
-
     P[0] = 1;
     for (let i = 1; i < 608; ++i) {
       P[i] = BigInt(P[i - 1]) * u2 % M;
@@ -110,7 +110,7 @@ function main() {
 
     for (let i = 0; i < 128; ++i) V[i] = i ^ i >> 1;
 
-    const ws = fs.createWriteStream(output);
+    const ws = fs.createWriteStream((process.env.OUTPUT_PATH).toString());
     const p1 = parseInt(readLine(), 10);
     for (var pItr = p1; pItr > 0; pItr--) {
         var n = parseInt(readLine(), 10),
