@@ -1,4 +1,5 @@
 'use strict';
+const output = process.env['OUTPUT_PATH']
 
 const fs = require('fs');
 const {
@@ -99,8 +100,9 @@ fs.readFile('testcase1.txt', function(err, data) {
 function readLine() {
     return inputString[currentLine++];
 };
-
 function main() {
+// console.log(process.env.OUTPUT_PATH)
+
     P[0] = 1;
     for (let i = 1; i < 608; ++i) {
       P[i] = BigInt(P[i - 1]) * u2 % M;
@@ -108,7 +110,7 @@ function main() {
 
     for (let i = 0; i < 128; ++i) V[i] = i ^ i >> 1;
 
-    const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
+    const ws = fs.createWriteStream(output);
     const p1 = parseInt(readLine(), 10);
     for (var pItr = p1; pItr > 0; pItr--) {
         var n = parseInt(readLine(), 10),
