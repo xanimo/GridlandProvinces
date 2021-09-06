@@ -89,7 +89,7 @@ function hh(n, a) {
 };
 
 // manually set testcase file below
-fs.readFile(('testcase1.txt').toString(), function(err, data) {
+fs.readFile('testcase5.txt', function(err, data) {
     if(err) return console.log(err);
     inputString = data.toString();
     inputString = inputString.trim().split('\n').map(str => str.trim());
@@ -102,6 +102,7 @@ fs.readFile(('testcase1.txt').toString(), function(err, data) {
 function readLine() {
     return inputString[currentLine++];
 };
+
 function main() {
     P[0] = 1;
     for (let i = 1; i < 608; ++i) {
@@ -117,6 +118,7 @@ function main() {
             s1 = readLine(),
             s2 = readLine(),
             a = [s1, s2];
+            console.log(a)
 
             shuffle(V, [V, 128]);
             res.clear();
@@ -125,7 +127,7 @@ function main() {
             a[0] = a[0].split('').reverse().join('');
             a[1] = a[1].split('').reverse().join('');
             hh(n, a);
-
+            console.log(res.size)
             ws.write(res.size + "\n");
     };
     ws.end();
